@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>飞机大战 · Plane War</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-wrap">
+    <canvas id="game" width="480" height="700"></canvas>
+
+    <!-- 顶部状态栏 -->
+    <div id="hud">
+      <div class="hud-item">得分 <span id="score">0</span></div>
+      <div class="hud-item">最高 <span id="best">0</span></div>
+      <div class="hud-item">生命 <span id="lives">♥♥♥</span></div>
+    </div>
+
+    <!-- 右上角按钮 -->
+    <div id="top-btns">
+      <button id="btn-sound" class="icon-btn" title="音效开关">🔊</button>
+      <button id="btn-pause" class="icon-btn" title="暂停/继续">⏸</button>
+    </div>
+
+    <!-- 开始界面 -->
+    <div id="start-screen" class="overlay">
+      <h1>飞 机 大 战</h1>
+      <p class="sub">PLANE&nbsp;WAR</p>
+      <div class="help">
+        <p>🖱️ 鼠标移动 / 触屏拖动 控制战机</p>
+        <p>⌨️ 方向键 或 WASD 也可移动</p>
+        <p>🔫 自动开火，吃道具升级火力</p>
+        <p>💣 空格键 / 点击屏幕 释放炸弹</p>
+      </div>
+      <button id="btn-start" class="big-btn">开 始 游 戏</button>
+    </div>
+
+    <!-- 暂停界面 -->
+    <div id="pause-screen" class="overlay hidden">
+      <h2>已 暂 停</h2>
+      <button id="btn-resume" class="big-btn">继 续</button>
+    </div>
+
+    <!-- 结束界面 -->
+    <div id="over-screen" class="overlay hidden">
+      <h2>游 戏 结 束</h2>
+      <p class="final">本局得分 <span id="final-score">0</span></p>
+      <p class="final small">最高纪录 <span id="final-best">0</span></p>
+      <button id="btn-restart" class="big-btn">再 来 一 局</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

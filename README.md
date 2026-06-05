@@ -38,11 +38,11 @@ python -m http.server 8080
 
 ```
 easybuy/
-├── index.html   # 页面结构与各界面（开始/暂停/结束）
-├── style.css    # 科技风深色主题样式
-├── game.js      # 游戏核心逻辑（实体、碰撞、绘制、音效、主循环）
+├── index.html   # 单文件：页面结构 + CSS 样式 + 游戏逻辑 全部内联其中
 └── README.md
 ```
+
+> 整个游戏只有一个 `index.html`，HTML、CSS、JavaScript 全部写在同一文件里，方便直接分发与运行。
 
 ## 🛠️ 技术要点
 
